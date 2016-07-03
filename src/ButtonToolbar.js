@@ -19,10 +19,11 @@ const ButtonToolbar = React.createClass({
 
   render() {
     let classes = getClassSet(this.props);
+    const { bsClass, bsSize, className, ...rest } = this.props;
 
     return (
       <div
-        {...this.props}
+        {...rest}
         role="toolbar"
         className={classNames(this.props.className, classes)}
       >
